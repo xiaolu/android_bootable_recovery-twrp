@@ -28,7 +28,7 @@
 		<!-- This is a rarely used partition on a Micro SD card for a very old app2sd system -->
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Adopted Data</string>
-		<string name="adopted_storage">Adopted Storage</string>
+		<string name="adopted_storage">Adopted存储</string>
 
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
@@ -142,6 +142,7 @@
 		<string name="format_data_ptr1">格式化Data分区将会清空您安装的所有</string>
 		<string name="format_data_ptr2">软件、图片、视频媒体、短信和通话记录</string>
 		<string name="format_data_ptr3">以及对内置存储所做的加密等。</string>
+		<string name="format_data_adopted">包括Adopted存储</string>
 		<string name="format_data_lcp1">格式化Data分区将会清空您安装的所有软件、图片、视频媒体、备份</string>
 		<string name="format_data_lcp2">以及对内置存储所做的加密等。</string>
 		<string name="format_data_wtc1">格式化Data分区会清除您的所有软件</string>
