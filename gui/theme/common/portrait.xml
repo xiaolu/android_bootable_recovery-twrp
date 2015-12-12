@@ -1486,6 +1486,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1500,6 +1501,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1525,6 +1527,7 @@
 			</fill>
 
 			<button>
+				<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				<placement x="indent" y="%row3a_y%" w="%content_width%" h="%navbar_height%"/>
 				<fill color="%transparent%"/>
 				<actions>
@@ -1541,6 +1544,7 @@
 			</partitionlist>
 
 			<button style="main_button_half_height">
+				<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				<placement x="%indent%" y="%row18a_y%"/>
 				<text>{@select_storage_btn=Select Storage}</text>
 				<actions>
@@ -1597,6 +1601,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1611,6 +1616,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1684,6 +1690,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1698,6 +1705,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1794,6 +1802,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1808,6 +1817,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1900,6 +1910,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>
@@ -1914,6 +1925,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%tab3_col3_x%" y="%row1_y%" w="%tab3_width%" h="%tab_height%"/>
 				<text>{@encryption_tab=ENCRYPTION}</text>

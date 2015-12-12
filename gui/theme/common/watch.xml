@@ -214,7 +214,7 @@
 				<text>{@backup_btn=Backup}</text>
 				<actions>
 					<action function="set">tw_back=main</action>
-					<action function="page">backup_selectstorage</action>
+					<action function="page">backup</action>
 				</actions>
 			</button>
 
@@ -1787,7 +1787,7 @@
 			</action>
 		</page>
 
-		<page name="backup_selectstorage">
+		<page name="backup">
 			<template name="page"/>
 
 			<template name="statusbar"/>
@@ -1808,7 +1808,7 @@
 				<image resource="q_btn_refresh"/>
 				<actions>
 					<action function="refreshsizes"/>
-					<action function="page">backup_selectstorage</action>
+					<action function="page">backup</action>
 				</actions>
 			</button>
 
@@ -1825,7 +1825,7 @@
 				<highlight color="%highlight_color%"/>
 				<image resource="q_btn_arrow_right"/>
 				<actions>
-					<action function="set">tw_back=backup_selectstorage</action>
+					<action function="set">tw_back=backup</action>
 					<action function="page">backup_selectpartitions</action>
 				</actions>
 			</button>
@@ -1870,7 +1870,7 @@
 				<placement x="%col1_x_left%" y="%row11_y%"/>
 				<highlight color="%highlight_color%"/>
 				<image resource="q_btn_arrow_left"/>
-				<action function="page">backup_selectstorage</action>
+				<action function="page">backup</action>
 			</button>
 
 			<button>
@@ -1947,6 +1947,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%btn4_col2_x%" y="%row11_y%"/>
 				<highlight color="%highlight_color%"/>
@@ -1962,6 +1963,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%btn4_col2_x%" y="%row11_y%"/>
 				<highlight color="%highlight_color%"/>
@@ -2072,7 +2074,7 @@
 				<placement x="%center_x%" y="%row2_header_y%" w="%screen_half_width%" h="48"/>
 				<actions>
 					<action function="set">tw_back=backup_confirm</action>
-					<action function="page">backup_selectstorage</action>
+					<action function="page">backup</action>
 				</actions>
 			</button>
 
@@ -2085,6 +2087,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="0"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%col1_x_right%" y="%row4a_y%"/>
 				<text>{@disabled=Disabled}</text>
@@ -2094,6 +2097,7 @@
 				<conditions>
 					<condition var1="tw_include_encrypted_backup" var2="1"/>
 					<condition var1="tw_encrypt_backup" var2="1"/>
+					<condition var1="tw_enable_adb_backup" op="!=" var2="1"/>
 				</conditions>
 				<placement x="%col1_x_right%" y="%row4a_y%"/>
 				<text>{@enabled=Enabled}</text>
@@ -2147,7 +2151,7 @@
 
 			<action>
 				<touch key="back"/>
-				<action function="page">backup_selectstorage</action>
+				<action function="page">backup</action>
 			</action>
 		</page>
 
