@@ -2048,7 +2048,7 @@ bool TWPartition::Backup_Dump_Image(string backup_folder) {
 	tw_set_default_metadata(Full_FileName.c_str());
 	if (TWFunc::Get_File_Size(Full_FileName) == 0) {
 		// Actual size may not match backup size due to bad blocks on MTD devices so just check for 0 bytes
-		gui_msg(Msg(msg::kError, "backup_size=Backup file size for '%s' is 0 bytes.")(Full_FileName));
+		gui_msg(Msg(msg::kError, "backup_size=Backup file size for '{1}' is 0 bytes.")(Full_FileName));
 		return false;
 	}
 	return true;
