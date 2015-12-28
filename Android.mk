@@ -369,7 +369,7 @@ else
     ifneq ($(wildcard external/toybox/Android.mk),)
         LOCAL_ADDITIONAL_DEPENDENCIES += toybox_symlinks
     endif
-	ifneq ($(wildcard external/zip/Android.mk),)
+    ifneq ($(wildcard external/zip/Android.mk),)
         LOCAL_ADDITIONAL_DEPENDENCIES += zip
     endif
     ifneq ($(wildcard external/unzip/Android.mk),)

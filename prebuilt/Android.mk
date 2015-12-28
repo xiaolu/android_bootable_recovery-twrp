@@ -20,7 +20,7 @@ else
 	RELINK_SOURCE_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto.so
 	ifneq (,$(filter $(PLATFORM_SDK_VERSION), 23))
 	    RELINK_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/toybox
-		ifneq ($(wildcard external/zip/Android.mk),)
+	    ifneq ($(wildcard external/zip/Android.mk),)
                 RELINK_SOURCE_FILES += $(TARGET_OUT_OPTIONAL_EXECUTABLES)/zip
 	    endif
 	    ifneq ($(wildcard external/unzip/Android.mk),)
