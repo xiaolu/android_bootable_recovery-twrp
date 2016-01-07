@@ -367,6 +367,7 @@ protected:
 	int mountsystemtoggle(std::string arg);
 	int setlanguage(std::string arg);
 	int twcmd(std::string arg);
+	int disable_stock_recovery_replace(std::string arg);
 
 	int simulate;
 };

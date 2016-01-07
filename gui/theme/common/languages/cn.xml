@@ -635,7 +635,7 @@
 		<string name="dumlock_restore">恢复原版boot...</string>
 		<string name="dumlock_reflash">重新刷入recovery到boot...</string>
 		<string name="run_script">正在运行 {1} 脚本...</string>
-		<string name="rename_stock">为了避免原版系统替换TWRP，重命名/system下原版recovery生成文件.</string>
+		<string name="rename_stock">为了避免原版系统替换TWRP，重命名/system下原版recovery的生成文件.</string>
 		<string name="split_backup">分解备份文件到多个压缩档...</string>
 		<string name="backup_error">建立备份失败.</string>
 		<string name="restore_error">在恢复过程中出错.</string>
@@ -665,5 +665,12 @@
 		<string name="no_real_sdcard">设备没有真正的SD Card! 中止!</string>
 		<string name="cancel_sideload">取消ADB sideload...</string>
 		<string name="change_fs_err">更换文件系统出错.</string>
+		<string name="swipe_reboot">滑动确认重启</string>
+		<string name="recovery_replace_hdr">禁止恢复原版Recovery</string>
+		<string name="recovery_replace_note1">禁止系统启动时恢复原版Recovery。</string>
+		<string name="recovery_replace_note2">立即禁止系统启动时恢复？</string>
+		<string name="recovery_replace_cancel">不禁止</string>
+		<string name="swipe_disable_replace">滑动确认禁止</string>
+		<string name="disable_replacing">禁止恢复原版Recovery...</string>
 	</resources>
 </language>

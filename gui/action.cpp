@@ -198,6 +198,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(checkpartitionlifetimewrites);
 		ADD_ACTION(mountsystemtoggle);
 		ADD_ACTION(setlanguage);
+		ADD_ACTION(disable_stock_recovery_replace);
 
 		// remember actions that run in the caller thread
 		for (mapFunc::const_iterator it = mf.begin(); it != mf.end(); ++it)
@@ -1821,6 +1822,23 @@ int GUIAction::setlanguage(std::string arg __unused)
 	PageManager::RequestReload();
 	op_status = 0; // success
 
+	operation_end(op_status);
+	return 0;
+}
+
+int GUIAction::disable_stock_recovery_replace(std::string arg __unused)
+{
+	int op_status = 0;
+
+	operation_start("Disable stock recovery replace");
+	if (simulate) {
+		simulate_progress_bar();
+	} else {
+		gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
+		rename("/system/recovery-from-boot.p", "/system/recovery-from-boot.bak");
+		sync();
+	}
+	usleep(2000000);
 	operation_end(op_status);
 	return 0;
 }
