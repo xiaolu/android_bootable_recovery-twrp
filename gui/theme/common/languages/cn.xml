@@ -237,7 +237,8 @@
 		<string name="restore_try_decrypt_s">正在尝试解密</string>
 		<string name="restore_backup_date">备份于%tw_restore_file_date%</string>
 		<string name="restore_sel_part">选择分区以恢复:</string>
-		<string name="retore_enable_md5_chk">启用备份文件的MD5校验</string>
+		<string name="restore_enable_md5_chk">启用备份文件的MD5校验</string>
+		<string name="restore_completed">恢复完毕</string>
 		<string name="swipe_restore">滑动确认恢复</string>
 		<string name="swipe_restore_s">   恢复</string>
 		<string name="rename_backup_hdr">备份改名</string>

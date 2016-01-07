@@ -305,6 +305,32 @@ int main(int argc, char **argv) {
 	if(crash_counter == 0)
 		TWFunc::Fixup_Time_On_Boot();
 
+#ifndef TW_OEM_BUILD
+	// Check if system has never been changed
+	TWPartition* sys = PartitionManager.Find_Partition_By_Path("/system");
+	TWPartition* ven = PartitionManager.Find_Partition_By_Path("/vendor");
+	if (sys) {
+		if ((DataManager::GetIntValue("tw_mount_system_ro") == 0 && sys->Check_Lifetime_Writes() == 0) || DataManager::GetIntValue("tw_mount_system_ro") == 2) {
+			if (DataManager::GetIntValue("tw_never_show_system_ro_page") == 0) {
+				DataManager::SetValue("tw_back", "main");
+				if (gui_startPage("system_readonly", 1, 1) != 0) {
+					LOGERR("Failed to start system_readonly GUI page.\n");
+				}
+			} else if (DataManager::GetIntValue("tw_mount_system_ro") == 0) {
+				sys->Change_Mount_Read_Only(false);
+				if (ven)
+					ven->Change_Mount_Read_Only(false);
+			}
+		} else if (DataManager::GetIntValue("tw_mount_system_ro") == 1) {
+			// Do nothing, user selected to leave system read only
+		} else {
+			sys->Change_Mount_Read_Only(false);
+			if (ven)
+				ven->Change_Mount_Read_Only(false);
+		}
+	}
+#endif
+
 	// Run any outstanding OpenRecoveryScript
 	if (DataManager::GetIntValue(TW_IS_ENCRYPTED) == 0 && (TWFunc::Path_Exists(SCRIPT_FILE_TMP) || TWFunc::Path_Exists(SCRIPT_FILE_CACHE))) {
 		OpenRecoveryScript::Run_OpenRecoveryScript();
@@ -335,31 +361,6 @@ int main(int argc, char **argv) {
 	PartitionManager.Disable_MTP();
 #endif
 
-#ifndef TW_OEM_BUILD
-	// Check if system has never been changed
-	TWPartition* sys = PartitionManager.Find_Partition_By_Path("/system");
-	TWPartition* ven = PartitionManager.Find_Partition_By_Path("/vendor");
-	if (sys) {
-		if ((DataManager::GetIntValue("tw_mount_system_ro") == 0 && sys->Check_Lifetime_Writes() == 0) || DataManager::GetIntValue("tw_mount_system_ro") == 2) {
-			if (DataManager::GetIntValue("tw_never_show_system_ro_page") == 0) {
-				DataManager::SetValue("tw_back", "main");
-				if (gui_startPage("system_readonly", 1, 1) != 0) {
-					LOGERR("Failed to start system_readonly GUI page.\n");
-				}
-			} else if (DataManager::GetIntValue("tw_mount_system_ro") == 0) {
-				sys->Change_Mount_Read_Only(false);
-				if (ven)
-					ven->Change_Mount_Read_Only(false);
-			}
-		} else if (DataManager::GetIntValue("tw_mount_system_ro") == 1) {
-			// Do nothing, user selected to leave system read only
-		} else {
-			sys->Change_Mount_Read_Only(false);
-			if (ven)
-				ven->Change_Mount_Read_Only(false);
-		}
-	}
-#endif
 	// Launch the main GUI
 	gui_start();
 

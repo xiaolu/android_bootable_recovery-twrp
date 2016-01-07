@@ -128,30 +128,10 @@ static int open_png(const char* name, png_structp* png_ptr, png_infop* info_ptr,
         result = -7;
         goto exit;
     }*/
-    if(bit_depth == 16)
-        png_set_strip_16(*png_ptr);
+    if (color_type == PNG_COLOR_TYPE_PALETTE) {
+        png_set_palette_to_rgb(png_ptr);
+    }
 
-    if(color_type == PNG_COLOR_TYPE_PALETTE)
-        png_set_palette_to_rgb(*png_ptr);
-
-    // PNG_COLOR_TYPE_GRAY_ALPHA is always 8 or 16bit depth.
-    if(color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8)
-        png_set_expand_gray_1_2_4_to_8(*png_ptr);
-
-    if(png_get_valid(*png_ptr, *info_ptr, PNG_INFO_tRNS))
-        png_set_tRNS_to_alpha(*png_ptr);
-
-    // These color_type don't have an alpha channel then fill it with 0xff.
-    if(color_type == PNG_COLOR_TYPE_RGB ||
-            color_type == PNG_COLOR_TYPE_GRAY ||
-            color_type == PNG_COLOR_TYPE_PALETTE)
-        png_set_filler(*png_ptr, 0xFF, PNG_FILLER_AFTER);
-
-    if(color_type == PNG_COLOR_TYPE_GRAY ||
-            color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
-        png_set_gray_to_rgb(*png_ptr);
-
-    png_read_update_info(*png_ptr, *info_ptr);
     *fpp = fp;
     return result;
 
@@ -189,6 +169,51 @@ static GGLSurface* init_display_surface(png_uint_32 width, png_uint_32 height) {
     return surface;
 }
 
+// Copy 'input_row' to 'output_row', transforming it to the
+// framebuffer pixel format.  The input format depends on the value of
+// 'channels':
+//
+//   1 - input is 8-bit grayscale
+//   3 - input is 24-bit RGB
+//   4 - input is 32-bit RGBA/RGBX
+//
+// 'width' is the number of pixels in the row.
+static void transform_rgb_to_draw(unsigned char* input_row,
+                                  unsigned char* output_row,
+                                  int channels, int width) {
+    int x;
+    unsigned char* ip = input_row;
+    unsigned char* op = output_row;
+
+    switch (channels) {
+        case 1:
+            // expand gray level to RGBX
+            for (x = 0; x < width; ++x) {
+                *op++ = *ip;
+                *op++ = *ip;
+                *op++ = *ip;
+                *op++ = 0xff;
+                ip++;
+            }
+            break;
+
+        case 3:
+            // expand RGBA to RGBX
+            for (x = 0; x < width; ++x) {
+                *op++ = *ip++;
+                *op++ = *ip++;
+                *op++ = *ip++;
+                *op++ = 0xff;
+            }
+            break;
+
+        case 4:
+            // copy RGBA to RGBX
+            memcpy(output_row, input_row, width*4);
+            break;
+    }
+}
+
 int res_create_surface_png(const char* name, gr_surface* pSurface) {
     GGLSurface* surface = NULL;
     int result = 0;
@@ -209,11 +234,13 @@ int res_create_surface_png(const char* name, gr_surface* pSurface) {
         goto exit;
     }
 
+    unsigned char* p_row = malloc(width * 4);
     unsigned int y;
     for (y = 0; y < height; ++y) {
-        unsigned char* p_row = surface->data + y * width * 4;
         png_read_row(png_ptr, p_row, NULL);
+        transform_rgb_to_draw(p_row, surface->data + y * width * 4, channels, width);
     }
+    free(p_row);
 
     if (channels == 3)
         surface->format = GGL_PIXEL_FORMAT_RGBX_8888;
