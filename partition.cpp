@@ -1972,7 +1972,7 @@ bool TWPartition::Backup_Tar(string backup_folder, const unsigned long long *ove
 	if (!Mount(true))
 		return false;
 
-	TWFunc::GUI_Operation_Text(TW_BACKUP_TEXT, Backup_Display_Name, "Backing Up");
+	TWFunc::GUI_Operation_Text(TW_BACKUP_TEXT, Backup_Display_Name, gui_parse_text("{@backing}"));
 	gui_msg(Msg("backing_up=Backing up {1}...")(Backup_Display_Name));
 
 	DataManager::GetValue(TW_USE_COMPRESSION_VAR, use_compression);

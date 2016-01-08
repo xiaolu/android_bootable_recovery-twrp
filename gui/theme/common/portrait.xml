@@ -1991,7 +1991,7 @@
 
 			<text style="text_m">
 				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>%tw_partition% Partition</text>
+				<text>%tw_partition%</text>
 			</text>
 
 			<template name="console"/>
