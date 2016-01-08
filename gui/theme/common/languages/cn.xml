@@ -488,8 +488,8 @@
 		<string name="md5_error"> * MD5错误!</string>
 		<string name="md5_compute_error"> * 计算MD5错误.</string>
 		<string name="md5_created"> * MD5已生成.</string>
-		<string name="current_date">(当前日期)</string>
-		<string name="auto_generate">(自动生成)</string>
+		<string name="current_date">(Current Date)</string>
+		<string name="auto_generate">(Auto Generate)</string>
 		<string name="unable_to_locate_partition">不能定位'{1}'分区.</string>
 		<string name="no_partition_selected">没有选择要备份的分区.</string>
 		<string name="total_partitions_backup"> * 备份分区的总数: {1}</string>
@@ -658,8 +658,8 @@
 		<string name="zip_wipe_cache">一个或多个刷机包请求清除cache -- 立即清除cache.</string>
 		<string name="and_sec_wipe_err">无法清除android secure</string>
 		<string name="dalvik_wipe_err">清除dalvik失败</string>
-		<string name="auto_gen">(自动生成)</string>
-		<string name="curr_date">(当前日期)</string>
+		<string name="auto_gen">(Auto Generate)</string>
+		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">备份名称太长.</string>
 		<string name="backup_name_invalid">备份名称中 '{1}' 中包含无效字符: '{1}'</string>
 		<string name="backup_name_exists">已经存在同名的备份.</string>
