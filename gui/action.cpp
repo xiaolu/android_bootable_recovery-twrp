@@ -1544,7 +1544,10 @@ int GUIAction::openrecoveryscript(std::string arg __unused)
 	} else {
 		int op_status = OpenRecoveryScript::Run_OpenRecoveryScript_Action();
 		operation_end(op_status);
+		if (!op_status)
+			DataManager::SetValue("tw_gui_done", 1);
 	}
+
 	return 0;
 }
 
