@@ -283,7 +283,8 @@ bool InputHandler::processInput(int timeout_ms)
 		break;
 	}
 
-	if ((ev.type != EV_KEY || ev.code != KEY_POWER) && ev.code > KEY_RESERVED)
+	HardwareKeyboard *kb = PageManager::GetHardwareKeyboard();
+	if (kb->IsKeyDown(ev.code))
 		blankTimer.resetTimerAndUnblank();
 
 	return true;  // we got an event, so there might be more in the queue
@@ -409,12 +410,6 @@ void InputHandler::process_EV_KEY(input_event& ev)
 			kb->KeyDown(KEY_BACK);
 		else
 			kb->KeyUp(KEY_BACK);
-	} else if (ev.code == KEY_POWER) {
-		// Wait for key_up
-		if (ev.value == 0) {
-			blankTimer.toggleBlank();
-			return;
-		}
 	} else if (ev.value != 0) {
 		// This is a key press
 #ifdef TW_USE_KEY_CODE_TOUCH_SYNC

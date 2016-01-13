@@ -728,6 +728,8 @@ int GUIAction::setguitimezone(std::string arg __unused)
 
 int GUIAction::overlay(std::string arg)
 {
+	if (arg == "lock")
+		blankTimer.toggleBlank();
 	return gui_changeOverlay(arg);
 }
 
