@@ -365,10 +365,16 @@ int main(int argc, char **argv) {
 	gui_start();
 
 #ifndef TW_OEM_BUILD
-	// Disable flashing of stock recovery
-	TWFunc::Disable_Stock_Recovery_Replace();
 	// Check for su to see if the device is rooted or not
 	if (DataManager::GetIntValue("tw_mount_system_ro") == 0 && PartitionManager.Mount_By_Path("/system", false)) {
+		// Disable flashing of stock recovery
+		if (TWFunc::Path_Exists("/system/recovery-from-boot.p")) {
+			DataManager::SetValue("tw_busy", 1);
+			if (gui_startPage("disable_stock_recovery_replace", 0, 1) != 0) {
+				LOGERR("Failed to start disable stock recovery replace page.\n");
+			}
+		}
+
 		if (TWFunc::Path_Exists("/supersu/su") && TWFunc::Path_Exists("/system/bin") && !TWFunc::Path_Exists("/system/bin/su") && !TWFunc::Path_Exists("/system/xbin/su") && !TWFunc::Path_Exists("/system/bin/.ext/.su")) {
 			// Device doesn't have su installed
 			DataManager::SetValue("tw_busy", 1);
