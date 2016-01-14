@@ -136,7 +136,6 @@ void blanktimer::blank(void) {
 		state = kOff;
 		TWFunc::Set_Brightness("0");
 		TWFunc::check_and_run_script("/sbin/postscreenblank.sh", "blank");
-		PageManager::ChangeOverlay("lock");
 	}
 #ifndef TW_NO_SCREEN_BLANK
 	if (state == kOff) {

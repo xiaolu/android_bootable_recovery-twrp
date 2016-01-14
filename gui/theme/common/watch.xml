@@ -3069,7 +3069,7 @@
 
 			<text style="text_m">
 				<placement x="%col1_x_left%" y="%row1_header_y%"/>
-				<text>{@mount_hdr=Mount} &gt; {usb_storage_hdr=USB Storage}</text>
+				<text>{@mount_hdr=Mount} &gt; {@usb_storage_hdr=USB Storage}</text>
 			</text>
 
 			<text style="text_m_accent">

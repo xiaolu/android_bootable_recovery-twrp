@@ -898,8 +898,8 @@ int GUIAction::screenshot(std::string arg __unused)
 	time_t tm;
 	char path[256];
 	int path_len;
-	uid_t uid = -1;
-	gid_t gid = -1;
+	uid_t uid = 1015;
+	gid_t gid = 1015;
 
 	struct passwd *pwd = getpwnam("media_rw");
 	if(pwd) {
@@ -914,7 +914,7 @@ int GUIAction::screenshot(std::string arg __unused)
 		strcpy(path, "/tmp/");
 	}
 
-	if(!TWFunc::Create_Dir_Recursive(path, 0666, uid, gid))
+	if(!TWFunc::Create_Dir_Recursive(path, 0775, uid, gid))
 		return 0;
 
 	tm = time(NULL);
