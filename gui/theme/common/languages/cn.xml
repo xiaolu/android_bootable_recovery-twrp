@@ -379,6 +379,7 @@
 		<string name="inject_twrp_complete">TWRP注入完毕</string>
 		<string name="swipe_to_confirm">滑动确认</string>
 		<string name="part_sd_hdr">给SD Card分区</string>
+		<string name="invalid_partsd_sel">你必须选择一个可移动设备</string>
 		<string name="part_sd_lose">你将丢失SD card上所有文件!</string>
 		<string name="part_sd_undo">此操作不能撤销!</string>
 		<string name="part_sd_ext_sz">EXT Size:</string>
@@ -673,5 +674,6 @@
 		<string name="recovery_replace_cancel">不禁止</string>
 		<string name="swipe_disable_replace">滑动确认禁止</string>
 		<string name="disable_replacing">禁止恢复原版Recovery...</string>
+		<string name="no_space">储存器上没有足够的空间.</string>
 	</resources>
 </language>
