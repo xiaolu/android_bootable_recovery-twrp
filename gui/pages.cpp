@@ -599,8 +599,8 @@ int Page::NotifyKey(int key, bool down)
 	for (iter = mActions.rbegin(); iter != mActions.rend(); iter++)
 	{
 		ret = (*iter)->NotifyKey(key, down);
-		//if (ret == 0)
-		//	return 0;
+		if (ret == 0)
+			return 0;
 		if (ret < 0) {
 			LOGERR("An action handler has returned an error\n");
 			ret = 1;
