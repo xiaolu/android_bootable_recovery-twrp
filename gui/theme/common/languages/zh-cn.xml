@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <language>
-	<display>Chinese</display>
+	<display>Simplified Chinese</display>
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
