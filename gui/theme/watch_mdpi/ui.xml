@@ -7,6 +7,7 @@
 		<title>Backup Naowz</title>
 		<description>Default basic theme</description>
 		<preview>preview.jpg</preview>
+		<themeversion>1</themeversion>
 	</details>
 
 	<include>
@@ -75,8 +76,7 @@
 	</resources>
 
 	<variables>
-		<variable name="tw_hide_kb" value="0" persist="1"/>
-
+		<variable name="tw_hide_kb" value="0"/>
 		<variable name="screen_width" value="320"/>
 		<variable name="screen_half_width" value="160"/>
 		<variable name="screen_height" value="320"/>
