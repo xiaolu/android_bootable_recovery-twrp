@@ -280,9 +280,9 @@
 		<string name="sys_rop4">替换TWRP并且不能Root你的设备.</string>
 		<string name="sys_rop5">安装刷机包或者通过adb操作依然可以</string>
 		<string name="sys_rop6">修改系统分区.</string>
-		<string name="sys_rol1">TWRP可以保留系统分区未经修改状态，使您更容易获得官方的更新.</string>
-		<string name="sys_rol2">TWRP将无法禁止原版固件可能替换TWRP的操作，并且不能Root你的设备.</string>
-		<string name="sys_rol3">安装刷机包或者通过adb操作依然可以修改系统分区.</string>
+		<string name="sys_rol1">TWRP可以保留系统分区未经修改状态，使您更容易获得官方的更新。</string>
+		<string name="sys_rol2">TWRP将无法禁止原版固件替换TWRP，而且不能Root你的设备.</string>
+		<string name="sys_rol3">安装刷机包或者通过adb操作依然可以修改系统分区或者Root.</string>
 		<string name="sys_ro_never_show_chk">启动时不再显示此页</string>
 		<string name="sys_ro_keep_ro_btn">保持只读</string>
 		<string name="swipe_allow_mod">滑动确认允许修改</string>
