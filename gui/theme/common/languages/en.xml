@@ -250,7 +250,6 @@
 		<string name="swipe_rename">   Rename</string>
 		<string name="confirm_hdr">Confirm</string>
 		<string name="mount_hdr">Mount</string>
-		<string name="mount_sel_part"></string>
 		<string name="mount_sel_part">Select Partitions to Mount:</string>
 		<string name="mount_sys_ro_chk">Mount system partition read-only</string>
 		<string name="mount_sys_ro_s_chk">Mount System RO</string>
@@ -568,7 +567,7 @@
 		<!-- {1} is the folder name that we could not mount, {2} is strerror output -->
 		<string name="fail_mount">Failed to mount '{1}' ({2})</string>
 		<!-- {1} is the folder name that we could not unmount, {2} is strerror output -->
-		<string name="fail_mount">Failed to unmount '{1}' ({2})</string>
+		<string name="fail_unmount">Failed to unmount '{1}' ({2})</string>
 		<string name="cannot_resize">Cannot resize {1}.</string>
 		<string name="repair_resize">Repairing {1} before resizing.</string>
 		<string name="unable_resize">Unable to resize {1}.</string>
