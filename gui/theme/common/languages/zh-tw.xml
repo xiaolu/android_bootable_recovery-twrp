@@ -567,7 +567,7 @@
 		<!-- {1} is the folder name that we could not mount, {2} is strerror output -->
 		<string name="fail_mount">掛載'{1}'失敗 ({2})</string>
 		<!-- {1} is the folder name that we could not unmount, {2} is strerror output -->
-		<string name="fail_mount">卸載'{1}'失敗 ({2})</string>
+		<string name="fail_unmount">卸載'{1}'失敗 ({2})</string>
 		<string name="cannot_resize">無法更改{1}大小。</string>
 		<string name="repair_resize">在調整大小之前修復{1}。</string>
 		<string name="unable_resize">無法調整{1}大小。</string>
@@ -623,7 +623,7 @@
 		<string name="no_updater_binary">刷機包中未找到'{1}'。</string>
 		<string name="check_for_md5">正在檢測MD5檔…</string>
 		<string name="fail_sysmap">映射檔'{1}'失敗</string>
-		<string name="verify_zip_sig">正在校驗Zip刷機包簽名...</string>
+		<string name="verify_zip_sig">正在校驗Zip刷機包簽名…</string>
 		<string name="verify_zip_fail">刷機包簽名校驗失敗！</string>
 		<string name="verify_zip_done">刷機包簽名校驗成功。</string>
 		<string name="zip_corrupt">刷機包已損壞！</string>
@@ -632,7 +632,7 @@
 		<string name="md5_match">MD5驗證成功</string>
 		<string name="pid_signal">{1}過程結束，標誌：{2}</string>
 		<string name="pid_error">{1}過程結束，錯誤：{2}</string>
-		<string name="install_dumlock">安裝HTC Dumlock到系統...</string>
+		<string name="install_dumlock">安裝HTC Dumlock到系統…</string>
 		<string name="dumlock_restore">正在恢復原版boot…</string>
 		<string name="dumlock_reflash">正在重新刷入recovery到boot…</string>
 		<string name="run_script">正在運行{1}腳本…</string>
@@ -661,7 +661,7 @@
 		<string name="auto_gen">(Auto Generate)</string>
 		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">備份名稱太長。</string>
-		<string name="backup_name_invalid">備份名稱'{1}'中中包含無效字元：'{1}'</string>
+		<string name="backup_name_invalid">備份名稱'{1}'中包含無效字元：'{1}'</string>
 		<string name="backup_name_exists">此備份檔案名已存在。</string>
 		<string name="no_real_sdcard">此設備沒有真實的SD卡！正在中止！</string>
 		<string name="cancel_sideload">取消ADB sideload…</string>
