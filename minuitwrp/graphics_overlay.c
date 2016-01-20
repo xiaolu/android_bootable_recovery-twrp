@@ -34,6 +34,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <string.h>
 
 #include <sys/ioctl.h>
 #include <sys/mman.h>
@@ -55,6 +56,10 @@
 
 #ifdef MSM_BSP
 #define ALIGN(x, align) (((x) + ((align)-1)) & ~((align)-1))
+
+extern bool isDisplaySplit(void);
+extern int getFbXres(void);
+extern int getLeftSplit(void);
 
 typedef struct {
     unsigned char *mem_buf;
