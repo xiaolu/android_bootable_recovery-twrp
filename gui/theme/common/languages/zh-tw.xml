@@ -367,7 +367,7 @@
 		<string name="fix_perm_s_btn">修復許可權</string>
 		<string name="part_sd_btn">分區SD卡</string>
 		<string name="part_sd_s_btn">SD卡</string>
-		<string name="file_manager_btn">檔管理</string>
+		<string name="file_manager_btn">檔案管理</string>
 		<string name="language_hdr">語言設置</string>
 		<string name="terminal_btn">終端命令</string>
 		<string name="reload_theme_btn">重載主題</string>
