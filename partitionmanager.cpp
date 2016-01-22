@@ -1204,7 +1204,7 @@ int TWPartitionManager::Format_Data(void) {
 
 		return dat->Wipe_Encryption();
 	} else {
-		gui_msg(Msg(msg::kError, "unable_to_locate=Unable to locate {1].")("/data"));
+		gui_msg(Msg(msg::kError, "unable_to_locate=Unable to locate {1}.")("/data"));
 		return false;
 	}
 	return false;
@@ -1228,7 +1228,7 @@ int TWPartitionManager::Wipe_Media_From_Data(void) {
 		Add_MTP_Storage(dat->MTP_Storage_ID);
 		return true;
 	} else {
-		gui_msg(Msg(msg::kError, "unable_to_locate=Unable to locate {1].")("/data"));
+		gui_msg(Msg(msg::kError, "unable_to_locate=Unable to locate {1}.")("/data"));
 		return false;
 	}
 	return false;
