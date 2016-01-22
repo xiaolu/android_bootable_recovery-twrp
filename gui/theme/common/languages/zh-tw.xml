@@ -278,7 +278,7 @@
 		<string name="sys_rop5">安裝刷機包或者通過adb操作依然可以</string>
 		<string name="sys_rop6">修改系統分區。</string>
 		<string name="sys_rol1">TWRP可以保持系統分區為未修改狀態，使您更容易獲得官方的更新。</string>
-		<string name="sys_rol2">TWRP將無法禁止原版固件可能替換TWRP的操作，並且不能Root您的設備。</string>
+		<string name="sys_rol2">TWRP將無法禁止原版固件替換TWRP，並且不能Root您的設備。</string>
 		<string name="sys_rol3">安裝刷機包或者通過adb操作依然可以修改系統分區。</string>
 		<string name="sys_ro_never_show_chk">下次啟動時不再顯示此介面</string>
 		<string name="sys_ro_keep_ro_btn">保持只讀</string>
