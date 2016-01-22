@@ -12,7 +12,7 @@
 		
 		<!-- Partition display names -->
 		<string name="system">System</string>
-		<string name="system_image">System Image</string>
+		<string name="system_image">System镜像</string>
 		<string name="vendor">Vendor</string>
 		<string name="vendor_image">Vendor Image</string>
 		<string name="boot">Boot</string>
@@ -35,7 +35,7 @@
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
 		<string name="cpu_temp">温度: %tw_cpu_temp% &#xB0;C</string>
 		<string name="battery_pct">电量: %tw_battery%</string>
-		<string name="sort_by_name">按文件名排序</string>
+		<string name="sort_by_name">按名称排序</string>
 		<string name="sort_by_date">按日期排序</string>
 		<string name="sort_by_size">按大小排序</string>
 		<string name="sort_by_name_only">名称</string>
@@ -46,7 +46,7 @@
 		<string name="tab_backup">备份</string>
 		<string name="tab_time_zone">时区</string>
 		<string name="tab_screen">屏幕</string>
-		<string name="tab_vibration">震动</string>
+		<string name="tab_vibration">振动</string>
 		<string name="tab_language">语言</string>
 
 		<string name="install_btn">安装</string>
@@ -58,7 +58,7 @@
 		<string name="advanced_btn">高级</string>
 		<string name="reboot_btn">重启</string>
 		<string name="files_btn">文件</string>
-		<string name="copy_log_btn">复制日志</string>
+		<string name="copy_log_btn">导出日志</string>
 		<string name="select_type_hdr">选择类型</string>
 		<string name="install_zip_hdr">安装Zip</string>
 		<string name="install_zip_btn">安装Zip</string>
@@ -219,7 +219,6 @@
 		<string name="backup_name_hdr">设置备份名称</string>
 		<string name="progress">进度:</string>
 		<string name="backup_complete">备份完毕</string>
-		<string name="backup_cancel">备份已取消</string>
 		<string name="restore_hdr">恢复</string>
 		<string name="sel_backup_hdr">选择备份</string>
 		<string name="restore_sel_store_hdr">从%tw_storage_display_name% (%tw_storage_free_size% MB)选择备份</string>
@@ -238,7 +237,7 @@
 		<string name="restore_backup_date">备份于%tw_restore_file_date%</string>
 		<string name="restore_sel_part">选择分区以恢复:</string>
 		<string name="restore_enable_md5_chk">启用备份文件的MD5校验</string>
-		<string name="restore_completed">恢复完毕</string>
+		<string name="restore_completed">[耗时{1}秒恢复完成]</string>
 		<string name="swipe_restore">滑动确认恢复</string>
 		<string name="swipe_restore_s">   恢复</string>
 		<string name="rename_backup_hdr">备份改名</string>
@@ -250,7 +249,6 @@
 		<string name="swipe_rename">   改名</string>
 		<string name="confirm_hdr">确认</string>
 		<string name="mount_hdr">挂载</string>
-
 		<string name="mount_sel_part">选择欲挂载的分区:</string>
 		<string name="mount_sys_ro_chk">以只读状态挂载系统分区</string>
 		<string name="mount_sys_ro_s_chk">挂载系统只读</string>
@@ -263,7 +261,6 @@
 		<string name="usb_stor_mnt2">从您的计算机卸载之前</string>
 		<string name="usb_stor_mnt3">一定要安全地移除设备！</string>
 		<string name="unmount_btn">卸载</string>
-		<string name="reboot_hdr">重启菜单</string>
 		<string name="rb_system_btn">系统</string>
 		<string name="rb_poweroff_btn">关机</string>
 		<string name="rb_recovery_btn">Recovery</string>
@@ -479,7 +476,6 @@
 		<string name="no_selinux">没有SELinux支持(无libselinux).</string>
 		<string name="mtp_enabled">MTP启用</string>
 		<string name="mtp_crash">MTP崩溃, 启动的时候不启动MTP.</string>
-		<string name="rebooting">正在重启...</string>
 		<string name="decrypt_success">使用默认密码成功解密.</string>
 		<string name="unable_to_decrypt">无法使用默认密码来解密. 你可能需要执行格式化Data分区.</string>
 		<string name="generating_md51">正在生成MD5</string>
@@ -488,7 +484,6 @@
 		<string name="md5_created"> * MD5已生成.</string>
 		<string name="md5_error"> * MD5错误!</string>
 		<string name="md5_compute_error"> * 计算MD5错误.</string>
-		<string name="md5_created"> * MD5已生成.</string>
 		<string name="current_date">(Current Date)</string>
 		<string name="auto_generate">(Auto Generate)</string>
 		<string name="unable_to_locate_partition">不能定位'{1}'分区.</string>
@@ -497,7 +492,7 @@
 		<string name="total_backup_size"> * 所有数据的总大小: {1}MB</string>
 		<string name="available_space"> * 可用空间: {1}MB</string>
 		<string name="unable_locate_storage">无法找到存储设备.</string>
-		<string name="Not enough free space on storage.">储存器上没有足够的空间.</string>
+		<string name="no_space">储存器上没有足够的空间.</string>
 		<string name="backup_started">[备份已开启]</string>
 		<string name="backup_folder"> * 备份目录: {1}</string>
 		<string name="fail_backup_folder">建立备份目录失败.</string>
@@ -515,10 +510,10 @@
 		<string name="restore_read_only">不能恢复{1} -- 只读挂载.</string>
 		<string name="restore_unable_locate">无法找到'{1}'分区.</string>
 		<string name="no_part_restore">没有选择要恢复的分区.</string>
-		<string name="restore_part_count">正在恢复{1}分区...</string>
+		<string name="restore_part_count">恢复{1}个分区...</string>
 		<string name="total_restore_size">总恢复大小 {1}MB</string>
 		<string name="updating_system_details">更新系统详细信息</string>
-		<string name="restore_complete">[耗时{1}秒恢复完成]</string>
+		<string name="restore_complete">恢复完毕</string>
 		<!-- {1} is the path we could not open, {2} is strerror output -->
 		<string name="error_opening_strerr">打开出错: '{1}' ({2})</string>
 		<string name="unable_locate_part_backup_name">无法通过备份名称来查找分区: '{1}'</string>
@@ -568,7 +563,7 @@
 		<!-- {1} is the folder name that we could not mount, {2} is strerror output -->
 		<string name="fail_mount">挂载'{1}'失败 ({2})</string>
 		<!-- {1} is the folder name that we could not unmount, {2} is strerror output -->
-		<string name="fail_mount">卸载'{1}'失败 ({2})</string>
+		<string name="fail_unmount">卸载'{1}'失败 ({2})</string>
 		<string name="cannot_resize">无法更改{1}大小.</string>
 		<string name="repair_resize">在更改大小之前修复{1}.</string>
 		<string name="unable_resize">无法修改{1}大小.</string>
@@ -579,6 +574,7 @@
 		<string name="format_data_err">无法格式化并删除加密.</string>
 		<string name="formatting_using">使用{2}格式化{1}...</string>
 		<string name="unable_to_wipe">无法清除{1}.</string>
+		<string name="cannot_wipe">无法清除分区 {1}.</string>
 		<string name="remove_all">移除'{1}'下所有文件</string>
 		<string name="wiping_data">清除data不清除/data/media ...</string>
 		<string name="backing_up">正在备份{1}...</string>
@@ -586,7 +582,7 @@
 		<string name="backup_size">备份'{1}'文件大小为0.</string>
 		<string name="datamedia_fs_restore">WARNING: 这个 /data 备份文件系统为{1}! 除非把文件系统格式设置为{1}不然可能无法启动.</string>
 		<string name="restoring">恢复{1}...</string>
-		<string name="restore">恢复</string>
+		<string name="restoring_hdr">正在恢复</string>
 		<string name="recreate_folder_err">无法重新建立{1}目录.</string>
 		<string name="img_size_err">镜像文件大小大于目标设备</string>
 		<string name="flashing">刷入{1}...</string>
@@ -618,7 +614,7 @@
 		<string name="backup_fail">备份失败</string>
 		<string name="backup_complete">备份完毕!</string>
 		<string name="running_recovery_commands">运行Recovery命令</string>
-		<string name="recovery_commands_complete">Recovery Commands Complete</string>
+		<string name="recovery_commands_complete">Recovery命令运行完毕</string>
 		<string name="running_ors">运行ORS脚本</string>
 		<string name="ors_complete">运行ORS脚本完毕</string>
 		<string name="no_updater_binary">刷机包中无法找到 '{1}'.</string>
@@ -663,7 +659,6 @@
 		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">备份名称太长.</string>
 		<string name="backup_name_invalid">备份名称中 '{1}' 中包含无效字符: '{1}'</string>
-		<string name="backup_name_exists">已经存在同名的备份.</string>
 		<string name="no_real_sdcard">设备没有真正的SD Card! 中止!</string>
 		<string name="cancel_sideload">取消ADB sideload...</string>
 		<string name="change_fs_err">更换文件系统出错.</string>
@@ -674,6 +669,6 @@
 		<string name="recovery_replace_cancel">不禁止</string>
 		<string name="swipe_disable_replace">滑动确认禁止</string>
 		<string name="disable_replacing">禁止恢复原版Recovery...</string>
-		<string name="no_space">储存器上没有足够的空间.</string>
+		<string name="theme_ver_err">自定义主题和TWRP版本不匹配. 使用原版主题.</string>
 	</resources>
 </language>

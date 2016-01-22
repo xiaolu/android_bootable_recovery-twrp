@@ -219,7 +219,6 @@
 		<string name="backup_name_hdr">設置備份名稱</string>
 		<string name="progress">進度：</string>
 		<string name="backup_complete">備份完成。</string>
-		<string name="backup_cancel">備份已取消。</string>
 		<string name="restore_hdr">恢復</string>
 		<string name="sel_backup_hdr">選擇備份</string>
 		<string name="restore_sel_store_hdr">從%tw_storage_display_name% (%tw_storage_free_size% MB)中選擇備份</string>
@@ -238,7 +237,7 @@
 		<string name="restore_backup_date">備份於%tw_restore_file_date%</string>
 		<string name="restore_sel_part">選擇要恢復的分區：</string>
 		<string name="restore_enable_md5_chk">啟用MD5驗證備份檔案</string>
-		<string name="restore_completed">恢復完成。</string>
+		<string name="restore_completed">[恢復已完成，耗時{1}秒]</string>
 		<string name="swipe_restore">滑動按鈕確認恢復</string>
 		<string name="swipe_restore_s">   恢復</string>
 		<string name="rename_backup_hdr">重命名備份</string>
@@ -262,7 +261,6 @@
 		<string name="usb_stor_mnt2">請確認解除掛載前先從</string>
 		<string name="usb_stor_mnt3">電腦上安全的移除設備！</string>
 		<string name="unmount_btn">卸載</string>
-		<string name="reboot_hdr">重啟菜單</string>
 		<string name="rb_system_btn">系統</string>
 		<string name="rb_poweroff_btn">關機</string>
 		<string name="rb_recovery_btn">Recovery</string>
@@ -478,7 +476,6 @@
 		<string name="no_selinux">無SELinux支持(無libselinux)。</string>
 		<string name="mtp_enabled">MTP已啟用</string>
 		<string name="mtp_crash">MTP已崩潰。啟動時不再加載MTP。</string>
-		<string name="rebooting">正在重啟…</string>
 		<string name="decrypt_success">已使用默認密碼解密成功。</string>
 		<string name="unable_to_decrypt">無法使用默認密碼來解密，你可能需要格式化Data分區。</string>
 		<string name="generating_md51">正在生成MD5</string>
@@ -487,7 +484,6 @@
 		<string name="md5_created"> * MD5已生成。</string>
 		<string name="md5_error"> * MD5錯誤！</string>
 		<string name="md5_compute_error"> * 計算MD5錯誤。</string>
-		<string name="md5_created"> * MD5已生成。</string>
 		<string name="current_date">(Current Date)</string>
 		<string name="auto_generate">(Auto Generate)</string>
 		<string name="unable_to_locate_partition">未找到'{1}'分區。</string>
@@ -496,7 +492,7 @@
 		<string name="total_backup_size"> * 備份數據總計：{1}MB</string>
 		<string name="available_space"> * 可用空間：{1}MB</string>
 		<string name="unable_locate_storage">未找到存儲設備。</string>
-		<string name="Not enough free space on storage.">記憶體上沒有足夠的空間。</string>
+		<string name="no_space">記憶體上沒有足夠的空間。</string>
 		<string name="backup_started">[已開始備份]</string>
 		<string name="backup_folder"> * 備份檔案夾：{1}</string>
 		<string name="fail_backup_folder">建立備份檔案夾失敗。</string>
@@ -514,10 +510,10 @@
 		<string name="restore_read_only">無法恢復{1} -- 已掛載為只讀。</string>
 		<string name="restore_unable_locate">無法找到'{1}'分區。</string>
 		<string name="no_part_restore">未選擇要恢復的分區。</string>
-		<string name="restore_part_count">正在恢復{1}分區…</string>
+		<string name="restore_part_count">恢復{1}個分區...</string>
 		<string name="total_restore_size">恢復檔案總計{1}MB</string>
 		<string name="updating_system_details">更新系統詳細資訊</string>
-		<string name="restore_complete">[恢復已完成，耗時{1}秒。]</string>
+		<string name="restore_complete">恢復完成</string>
 		<!-- {1} is the path we could not open, {2} is strerror output -->
 		<string name="error_opening_strerr">打開出錯：'{1}' ({2})</string>
 		<string name="unable_locate_part_backup_name">無法通過備份名稱來查找分區：'{1}'</string>
@@ -578,6 +574,7 @@
 		<string name="format_data_err">無法格式化並刪除加密。</string>
 		<string name="formatting_using">使用{2}格式化{1}…</string>
 		<string name="unable_to_wipe">無法清除{1}。</string>
+		<string name="cannot_wipe">無法清除分區 {1}.</string>
 		<string name="remove_all">移除'{1}'下所有檔案</string>
 		<string name="wiping_data">正在清除data，跳過清除/data/media…</string>
 		<string name="backing_up">正在備份{1}…</string>
@@ -585,7 +582,7 @@
 		<string name="backup_size">'{1}'備份檔案大小為0位元組。</string>
 		<string name="datamedia_fs_restore">警告：此/data備份檔案系統為{1}！除非把檔案系統格式設置為{1}否則可能無法啟動。</string>
 		<string name="restoring">正在恢復{1}…</string>
-		<string name="restore">正在恢復</string>
+		<string name="restoring_hdr">正在恢復</string>
 		<string name="recreate_folder_err">無法重新創建{1}檔案夾。</string>
 		<string name="img_size_err">鏡像大小大於目標設備</string>
 		<string name="flashing">正在刷入{1}…</string>
@@ -662,7 +659,6 @@
 		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">備份名稱太長。</string>
 		<string name="backup_name_invalid">備份名稱'{1}'中包含無效字元：'{1}'</string>
-		<string name="backup_name_exists">此備份檔案名已存在。</string>
 		<string name="no_real_sdcard">此設備沒有真實的SD卡！正在中止！</string>
 		<string name="cancel_sideload">取消ADB sideload…</string>
 		<string name="change_fs_err">更換檔案系統出錯。</string>
@@ -673,6 +669,6 @@
 		<string name="recovery_replace_cancel">不禁止</string>
 		<string name="swipe_disable_replace">滑動按鈕確認禁止</string>
 		<string name="disable_replacing">正在禁止恢復原版Recovery…</string>
-		<string name="no_space">記憶體上沒有足夠的存儲空間。</string>
+		<string name="theme_ver_err">自定義主題和TWRP不匹配，使用原版主題.</string>
 	</resources>
 </language>
