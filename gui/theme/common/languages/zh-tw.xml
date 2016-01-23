@@ -356,6 +356,7 @@
 		<string name="kb_vibration">鍵盤振動強度：</string>
 		<string name="act_vibration">操作振動強度：</string>
 		<string name="select_language">選擇語言：</string>
+		<string name="sel_lang_btn">選擇語言</string>
 		<string name="set_language_btn">設置語言</string>
 		<string name="advanced_hdr">高級選項</string>
 		<string name="copy_log_confirm">是否導出日誌到內置存儲？</string>
@@ -432,7 +433,7 @@
 		<string name="fm_perms">許可權：</string>
 		<string name="fm_complete">操作完成。</string>
 		<string name="decrypt_data_hdr">解密Data分區</string>
-		<string name="decrypt_data_enter_pass"></string>
+		<string name="decrypt_data_enter_pass">輸入密碼.</string>
 		<string name="decryt_data_failed">密碼錯誤，請重試！</string>
 		<string name="decryt_data_failed_pattern">圖案錯誤，請重試！</string>
 		<string name="decrypt_data_enter_pattern">繪製解鎖圖案</string>

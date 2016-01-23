@@ -14,7 +14,7 @@
 		<string name="system">System</string>
 		<string name="system_image">System镜像</string>
 		<string name="vendor">Vendor</string>
-		<string name="vendor_image">Vendor Image</string>
+		<string name="vendor_image">Vendor镜像</string>
 		<string name="boot">Boot</string>
 		<string name="recovery">Recovery</string>
 		<string name="cache">Cache</string>
@@ -95,7 +95,7 @@
 		<string name="successful">成功</string>
 		<string name="install_failed">安装失败</string>
 		<string name="install_successful">安装成功</string>
-		<string name="wipe_cache_dalvik_btn">清除 cache/dalvik</string>
+		<string name="wipe_cache_dalvik_btn">清除cache/dalvik</string>
 		<string name="reboot_system_btn">重启系统</string>
 		<string name="install_sel_target">选择目标分区</string>
 		<string name="flash_image_select">选择分区以刷入镜像文件:</string>
@@ -356,6 +356,7 @@
 		<string name="kb_vibration">键盘震动:</string>
 		<string name="act_vibration">操作震动:</string>
 		<string name="select_language">选择语言:</string>
+		<string name="sel_lang_btn">选择语言</string>
 		<string name="set_language_btn">设置语言</string>
 		<string name="advanced_hdr">高级选项</string>
 		<string name="copy_log_confirm">复制日志到内置储存?</string>
@@ -432,7 +433,7 @@
 		<string name="fm_perms">权限:</string>
 		<string name="fm_complete">文件操作完毕</string>
 		<string name="decrypt_data_hdr">解密Data</string>
-		<string name="decrypt_data_enter_pass"></string>
+		<string name="decrypt_data_enter_pass">输入密码.</string>
 		<string name="decryt_data_failed">密码错误，请重试!</string>
 		<string name="decryt_data_failed_pattern">密码错误，请重试!</string>
 		<string name="decrypt_data_enter_pattern">输入模式.</string>
@@ -553,7 +554,7 @@
 		<string name="too_many_flash">选择刷入太多的分区.</string>
 		<string name="invalid_flash">刷入分区指定无效.</string>
 		<string name="flash_done">[镜像刷入完毕]</string>
-		<string name="wiping">正在清除 {1}</string>
+		<string name="wiping">正在清除{1}</string>
 		<string name="repair_not_exist">{1} 不存在! 无法修复!</string>
 		<string name="repairing_using">正在使用{2}修复{1}...</string>
 		<string name="unable_repair">无法修复 {1}.</string>
