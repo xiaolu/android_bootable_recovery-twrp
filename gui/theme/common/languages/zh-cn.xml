@@ -90,7 +90,7 @@
 		<string name="zip_add_btn">添加更多刷机包</string>
 		<string name="zip_clear_btn">清除刷机队列</string>
 		<string name="install_zip_count_hdr">总共%tw_zip_queue_count%个刷机包，目前第%tw_zip_index%个刷机包</string>
-		<string name="installing_zip">正在安装: %tw_file%</string>
+		<string name="installing_zip_xml">正在安装: %tw_file%</string>
 		<string name="failed">失败</string>
 		<string name="successful">成功</string>
 		<string name="install_failed">安装失败</string>
@@ -237,7 +237,7 @@
 		<string name="restore_backup_date">备份于%tw_restore_file_date%</string>
 		<string name="restore_sel_part">选择分区以恢复:</string>
 		<string name="restore_enable_md5_chk">启用备份文件的MD5校验</string>
-		<string name="restore_completed">[耗时{1}秒恢复完成]</string>
+		<string name="restore_complete">恢复完毕</string>
 		<string name="swipe_restore">滑动确认恢复</string>
 		<string name="swipe_restore_s">   恢复</string>
 		<string name="rename_backup_hdr">备份改名</string>
@@ -503,7 +503,7 @@
 		<string name="restore_started">[恢复已经开始]</string>
 		<string name="restore_folder">恢复目录: '{1}'</string>
 		<!-- {1} is the partition display name and {2} is the number of seconds -->
-		<string name="restort_part_done">[{1} 完成 ({2}秒)]</string>
+		<string name="restort_part_done">[{1}恢复完成({2}秒)]</string>
 		<string name="verifying_md5">正在校验MD5</string>
 		<string name="skip_md5">正在跳过MD5检测基于用户设置.</string>
 		<string name="calc_restore">正在计算恢复详情...</string>
@@ -513,7 +513,7 @@
 		<string name="restore_part_count">恢复{1}个分区...</string>
 		<string name="total_restore_size">总恢复大小 {1}MB</string>
 		<string name="updating_system_details">更新系统详细信息</string>
-		<string name="restore_complete">恢复完毕</string>
+		<string name="restore_completed">[耗时{1}秒恢复完成]</string>
 		<!-- {1} is the path we could not open, {2} is strerror output -->
 		<string name="error_opening_strerr">打开出错: '{1}' ({2})</string>
 		<string name="unable_locate_part_backup_name">无法通过备份名称来查找分区: '{1}'</string>
@@ -569,7 +569,7 @@
 		<string name="unable_resize">无法修改{1}大小.</string>
 		<string name="no_md5_found">无法为'{1}'找到MD5校验文件. 请取消允许MD5校验选项.</string>
 		<string name="md5_fail_match">MD5校验失败 '{1}'.</string>
-		<string name="restoring">正在恢复</string>
+		<string name="fail_decrypt_tar">无法解密tar文件： '{1}'</string>
 		<string name="format_data_msg">你可能需要重启recovery才能使用/data.</string>
 		<string name="format_data_err">无法格式化并删除加密.</string>
 		<string name="formatting_using">使用{2}格式化{1}...</string>
@@ -586,7 +586,7 @@
 		<string name="recreate_folder_err">无法重新建立{1}目录.</string>
 		<string name="img_size_err">镜像文件大小大于目标设备</string>
 		<string name="flashing">刷入{1}...</string>
-		<string name="backup_folder">备份目录设置为 '{1}'</string>
+		<string name="backup_folder_set">备份目录设置为 '{1}'</string>
 		<string name="locate_backup_err">无法找到备份文件 '{1}'</string>
 		<string name="set_restore_opt">设置恢复选项: '{1}':</string>
 		<string name="md5_check_skip">跳过MD5校验已打开</string>

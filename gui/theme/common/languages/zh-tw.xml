@@ -12,9 +12,9 @@
 		
 		<!-- Partition display names -->
 		<string name="system">System</string>
-		<string name="system_image">System Image</string>
+		<string name="system_image">System鏡像</string>
 		<string name="vendor">Vendor</string>
-		<string name="vendor_image">Vendor Image</string>
+		<string name="vendor_image">Vendor鏡像</string>
 		<string name="boot">Boot</string>
 		<string name="recovery">Recovery</string>
 		<string name="cache">Cache</string>
@@ -90,7 +90,7 @@
 		<string name="zip_add_btn">添加更多刷機包</string>
 		<string name="zip_clear_btn">清除刷機佇列</string>
 		<string name="install_zip_count_hdr">正在刷入第%tw_zip_queue_count%個，共%tw_zip_index%個刷機包</string>
-		<string name="installing_zip">正在安裝: %tw_file%</string>
+		<string name="installing_zip_xml">正在安裝: %tw_file%</string>
 		<string name="failed">失敗</string>
 		<string name="successful">成功</string>
 		<string name="install_failed">安裝失敗</string>
@@ -237,7 +237,7 @@
 		<string name="restore_backup_date">備份於%tw_restore_file_date%</string>
 		<string name="restore_sel_part">選擇要恢復的分區：</string>
 		<string name="restore_enable_md5_chk">啟用MD5驗證備份檔案</string>
-		<string name="restore_completed">[恢復已完成，耗時{1}秒]</string>
+		<string name="restore_complete">恢復完成。</string>
 		<string name="swipe_restore">滑動按鈕確認恢復</string>
 		<string name="swipe_restore_s">   恢復</string>
 		<string name="rename_backup_hdr">重命名備份</string>
@@ -278,7 +278,7 @@
 		<string name="sys_rop5">安裝刷機包或者通過adb操作依然可以</string>
 		<string name="sys_rop6">修改系統分區。</string>
 		<string name="sys_rol1">TWRP可以保持系統分區為未修改狀態，使您更容易獲得官方的更新。</string>
-		<string name="sys_rol2">TWRP將無法禁止原版固件可能替換TWRP的操作，並且不能Root您的設備。</string>
+		<string name="sys_rol2">TWRP將無法禁止原版固件替換TWRP，並且不能Root您的設備。</string>
 		<string name="sys_rol3">安裝刷機包或者通過adb操作依然可以修改系統分區。</string>
 		<string name="sys_ro_never_show_chk">下次啟動時不再顯示此介面</string>
 		<string name="sys_ro_keep_ro_btn">保持只讀</string>
@@ -510,10 +510,10 @@
 		<string name="restore_read_only">無法恢復{1} -- 已掛載為只讀。</string>
 		<string name="restore_unable_locate">無法找到'{1}'分區。</string>
 		<string name="no_part_restore">未選擇要恢復的分區。</string>
-		<string name="restore_part_count">恢復{1}個分區...</string>
+		<string name="restore_part_count">恢復{1}個分區…</string>
 		<string name="total_restore_size">恢復檔案總計{1}MB</string>
 		<string name="updating_system_details">更新系統詳細資訊</string>
-		<string name="restore_complete">恢復完成</string>
+		<string name="restore_completed">[恢复完成，耗时{1} 秒]</string>
 		<!-- {1} is the path we could not open, {2} is strerror output -->
 		<string name="error_opening_strerr">打開出錯：'{1}' ({2})</string>
 		<string name="unable_locate_part_backup_name">無法通過備份名稱來查找分區：'{1}'</string>
@@ -569,12 +569,12 @@
 		<string name="unable_resize">無法調整{1}大小。</string>
 		<string name="no_md5_found">未找到'{1}'MD5校驗檔案，請取消啟用MD5驗證備份檔案選項。</string>
 		<string name="md5_fail_match">'{1}'MD5校驗失敗。</string>
-		<string name="restoring">正在恢復</string>
+		<string name="fail_decrypt_tar">無法解密tar檔案：'{1}'</string>
 		<string name="format_data_msg">您可能需要重啟recovery才能使用/data。</string>
 		<string name="format_data_err">無法格式化並刪除加密。</string>
 		<string name="formatting_using">使用{2}格式化{1}…</string>
 		<string name="unable_to_wipe">無法清除{1}。</string>
-		<string name="cannot_wipe">無法清除分區 {1}.</string>
+		<string name="cannot_wipe">無法清除{1}分區。</string>
 		<string name="remove_all">移除'{1}'下所有檔案</string>
 		<string name="wiping_data">正在清除data，跳過清除/data/media…</string>
 		<string name="backing_up">正在備份{1}…</string>
@@ -586,7 +586,7 @@
 		<string name="recreate_folder_err">無法重新創建{1}檔案夾。</string>
 		<string name="img_size_err">鏡像大小大於目標設備</string>
 		<string name="flashing">正在刷入{1}…</string>
-		<string name="backup_folder">備份檔案夾設置為：'{1}'</string>
+		<string name="backup_folder_set">備份檔案夾設置為：'{1}'</string>
 		<string name="locate_backup_err">未找到備份檔案'{1}'</string>
 		<string name="set_restore_opt">設置恢復選項：'{1}'：</string>
 		<string name="md5_check_skip">校驗MD5已開啟</string>
@@ -669,6 +669,6 @@
 		<string name="recovery_replace_cancel">不禁止</string>
 		<string name="swipe_disable_replace">滑動按鈕確認禁止</string>
 		<string name="disable_replacing">正在禁止恢復原版Recovery…</string>
-		<string name="theme_ver_err">自定義主題和TWRP不匹配，使用原版主題.</string>
+		<string name="theme_ver_err">自定義主題和TWRP版本不匹配，正使用默認主題。</string>
 	</resources>
 </language>
