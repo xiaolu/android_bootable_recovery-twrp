@@ -337,6 +337,9 @@ ifneq ($(TW_DEFAULT_LANGUAGE),)
 else
     LOCAL_CFLAGS += -DTW_DEFAULT_LANGUAGE=en
 endif
+ifeq ($(TW_SKIP_SYSTEM_RO_PAGE),true)
+    LOCAL_CFLAGS += -DSKIP_SYSTEM_RO_PAGE
+endif
 
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     dump_image \

@@ -918,8 +918,13 @@ void DataManager::SetDefaultValues()
 	mConstValues.insert(make_pair("tw_has_mtp", "0"));
 	mConstValues.insert(make_pair("tw_mtp_enabled", "0"));
 #endif
+#ifdef SKIP_SYSTEM_RO_PAGE
+	mValues.insert(make_pair("tw_mount_system_ro", make_pair("0", 1)));
+	mValues.insert(make_pair("tw_never_show_system_ro_page", make_pair("1", 1)));
+#else
 	mValues.insert(make_pair("tw_mount_system_ro", make_pair("2", 1)));
 	mValues.insert(make_pair("tw_never_show_system_ro_page", make_pair("0", 1)));
+#endif
 	mValues.insert(make_pair("tw_language", make_pair(EXPAND(TW_DEFAULT_LANGUAGE), 1)));
 	LOGINFO("LANG: %s\n", EXPAND(TW_DEFAULT_LANGUAGE));
 
