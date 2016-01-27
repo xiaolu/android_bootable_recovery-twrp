@@ -34,7 +34,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
-#include <string.h>
 
 #include <sys/ioctl.h>
 #include <sys/mman.h>
@@ -57,10 +56,6 @@
 #ifdef MSM_BSP
 #define ALIGN(x, align) (((x) + ((align)-1)) & ~((align)-1))
 
-extern bool isDisplaySplit(void);
-extern int getFbXres(void);
-extern int getLeftSplit(void);
-
 typedef struct {
     unsigned char *mem_buf;
     int size;
@@ -74,26 +69,17 @@ static int overlayL_id = MSMFB_NEW_REQUEST;
 static int overlayR_id = MSMFB_NEW_REQUEST;
 
 static memInfo mem_info;
-extern int PIXEL_FORMAT;
 
 static int map_mdp_pixel_format()
 {
-    int format;
-    switch(PIXEL_FORMAT)
-    {
-       case GGL_PIXEL_FORMAT_RGBA_8888:
-          format = MDP_RGBA_8888;
-          break;
-       case GGL_PIXEL_FORMAT_BGRA_8888:
-          format = MDP_BGRA_8888;
-          break;
-       case GGL_PIXEL_FORMAT_RGBX_8888:
-          format = MDP_RGBX_8888;
-          break;
-       default:
-          format = MDP_RGB_565;
-          break;
-    }
+    int format = MDP_RGB_565;
+#if defined(RECOVERY_BGRA)
+    format = MDP_BGRA_8888;
+#elif defined(RECOVERY_RGBA)
+    format = MDP_RGBA_8888;
+#elif defined(RECOVERY_RGBX)
+    format = MDP_RGBA_8888;
+#endif
     return format;
 }
 
