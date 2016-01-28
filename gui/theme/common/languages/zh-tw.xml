@@ -672,5 +672,6 @@
 		<string name="swipe_disable_replace">滑動按鈕確認禁止</string>
 		<string name="disable_replacing">正在禁止恢復原版Recovery…</string>
 		<string name="theme_ver_err">自定義主題和TWRP版本不匹配，正使用默認主題。</string>
+		<string name="up_a_level">(返回上級文件夾)</string>
 	</resources>
 </language>

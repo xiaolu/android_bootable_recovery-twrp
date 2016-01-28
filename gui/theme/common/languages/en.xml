@@ -674,5 +674,6 @@
 		<string name="swipe_disable_replace">Swipe to Allow Disable</string>
 		<string name="disable_replacing">Disable stock recovery replace...</string>
 		<string name="theme_ver_err">Custom theme version does not match TWRP version. Using stock theme.</string>
+		<string name="up_a_level">(Up A Level)</string>
 	</resources>
 </language>
