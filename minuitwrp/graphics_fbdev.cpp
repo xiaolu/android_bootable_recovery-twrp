@@ -171,7 +171,7 @@ static GRSurface* fbdev_init(minui_backend* backend) {
     vi.xres_virtual = fi.line_length / gr_framebuffer[0].pixel_bytes;
 #endif
     gr_framebuffer[0].data = reinterpret_cast<uint8_t*>(bits);
-    if (vi.bits_per_pixel == 16) {
+/*    if (vi.bits_per_pixel == 16) {
         printf("setting GGL_PIXEL_FORMAT_RGB_565\n");
         gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGB_565;
     } else if (vi.red.offset == 8) {
@@ -191,6 +191,55 @@ static GRSurface* fbdev_init(minui_backend* backend) {
             printf("No valid pixel format detected, trying GGL_PIXEL_FORMAT_RGB_565\n");
             gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGB_565;
         }
+    }
+*/
+    switch(vi.bits_per_pixel)
+    {
+        case 16:
+            if (vi.green.length == 4) {
+                printf("setting GGL_PIXEL_FORMAT_RGBA_4444\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGBA_4444;
+            } else if (vi.green.length == 5) {
+                printf("setting GGL_PIXEL_FORMAT_RGBA_5551\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGBA_5551;
+            } else if (vi.green.length == 6) {
+                printf("setting GGL_PIXEL_FORMAT_RGBX_8888\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGB_565;
+            }
+            break;
+        case 24:
+            printf("setting GGL_PIXEL_FORMAT_RGB_888\n");
+            gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGB_888;
+            break;
+        case 32:
+            if (vi.red.offset == 0) {
+                printf("setting GGL_PIXEL_FORMAT_RGBA_8888\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGBA_8888;
+            }
+            else if (vi.red.offset == 8) {
+                printf("setting GGL_PIXEL_FORMAT_BGRA_8888\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_BGRA_8888;
+            }
+            else if (vi.red.offset == 16) {
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_BGRA_8888;
+                printf("setting GGL_PIXEL_FORMAT_BGRA_8888\n");
+#ifndef RECOVERY_BGRA
+                if (vi.transp.length == 0) { // 3x8-bit RGB (samsung 5433 7420)
+
+                    printf("vi.transp.length=0 setting GGL_PIXEL_FORMAT_RGBX_8888\n");
+                    gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGBX_8888;
+                }
+#endif
+            }
+            else if (vi.red.offset == 24) {
+                printf("setting GGL_PIXEL_FORMAT_RGBX_8888\n");
+                gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGBX_8888;
+            }
+            break;
+        default:
+            printf("No valid pixel format detected, trying GGL_PIXEL_FORMAT_RGB_565\n");
+            gr_framebuffer[0].format = GGL_PIXEL_FORMAT_RGB_565;
+            break;
     }
 
     // Drawing directly to the framebuffer takes about 5 times longer.
