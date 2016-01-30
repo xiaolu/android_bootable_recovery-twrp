@@ -664,7 +664,6 @@
 		<string name="no_real_sdcard">This device does not have a real SD Card! Aborting!</string>
 		<string name="cancel_sideload">Cancelling ADB sideload...</string>
 		<string name="change_fs_err">Error changing file system.</string>
-		<string name="swipe_reboot">Swipe to Reboot</string>
 		<string name="recovery_replace_hdr">Disable stock recovery replace</string>
 		<string name="recovery_replace_note1">Disable stock recovery replace during system boot.</string>
 		<string name="recovery_replace_note2">Disable stock recovery replace now?</string>
