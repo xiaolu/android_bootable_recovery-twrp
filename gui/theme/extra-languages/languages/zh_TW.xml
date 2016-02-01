@@ -365,7 +365,7 @@
 		<string name="copy_log_confirm">是否導出日誌到內置存儲？</string>
 		<string name="copying_log">正在複製…</string>
 		<string name="copy_log_complete">日誌導出完成。</string>
-		<string name="fix_context_btn">修復上下文</string>
+		<string name="fix_context_btn">修復SELinux</string>
 		<string name="part_sd_btn">分區SD卡</string>
 		<string name="part_sd_s_btn">SD卡</string>
 		<string name="file_manager_btn">檔案管理</string>

@@ -5,5 +5,5 @@ You can find a compiling guide [here](http://forum.xda-developers.com/showthread
 加入中文：
 TW_EXTRA_LANGUAGES := true
 默认中文：
-TW_DEFAULT_LANGUAGE := zh-CN
+TW_DEFAULT_LANGUAGE := zh_CN
 

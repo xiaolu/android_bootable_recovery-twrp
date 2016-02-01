@@ -412,7 +412,7 @@
 		<string name="fm_type_folder">文件夹</string>
 		<string name="fm_type_file">文件</string>
 		<string name="fm_choose_act">选择操作</string>
-		<string name="fm_selected">已选择：%tw_fm_type%</string>
+		<string name="fm_selected">%tw_fm_type%已选择：</string>
 		<string name="fm_copy_btn">复制</string>
 		<string name="fm_copy_file_btn">复制文件</string>
 		<string name="fm_copy_folder_btn">复制文件夹</string>
@@ -452,7 +452,7 @@
 		<string name="sideload_confirm">ADB Sideload</string>
 		<string name="sideload_usage">使用方式：电脑CMD输入adb sideload xxxx(刷机包名).zip</string>
 		<string name="sideload_complete">ADB Sideload完成。</string>
-		<string name="fix_contexts_hdr">修复上下文</string>
+		<string name="fix_contexts_hdr">修复SELinux</string>
 		<string name="fix_contexts_note1">注意：很少情况下需要修复SELinux上下文。</string>
 		<string name="fix_contexts_note2">修复SELinux上下文可能会导致</string>
 		<string name="fix_contexts_note3">您的设备无法正常启动。</string>
