@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from xml.dom import minidom
 import sys
 import getopt
@@ -8,11 +10,11 @@ HELP = """
                    -h - help info
 """
 
-enfile = "en.xml"
+enfile = "gui/theme/common/languages/en.xml"
 otherfile = ""
 
 try:
-	opts, args = getopt.getopt(sys.argv[1:], "hfo:koz", ["device="])
+	opts, args = getopt.getopt(sys.argv[1:], "hf:o:koz", ["device="])
 except getopt.GetoptEror:
 	print HELP
 	sys.stdout.flush()
