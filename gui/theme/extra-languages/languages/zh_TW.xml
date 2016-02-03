@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <language>
-	<display>Traditional Chinese</display>
+	<display>Chinese (Traditional)</display>
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
@@ -141,10 +141,10 @@
 		<string name="format_data_hdr">格式化Data分區</string>
 		<string name="format_data_btn">格式化Data分區</string>
 		<string name="format_data_ptr1">格式化Data分區將會清空您安裝的所有</string>
-		<string name="format_data_ptr2">軟體、圖片、視頻媒體、短信和通話記錄</string>
+		<string name="format_data_ptr2">軟體、圖片、視頻、媒體，</string>
 		<string name="format_data_ptr3">以及對內置存儲所做的加密等。</string>
 		<string name="format_data_adopted">也包括Adopted存儲</string>
-		<string name="format_data_lcp1">格式化Data分區將會清空您安裝的所有軟體、圖片、視頻媒體、短信和通話記錄</string>
+		<string name="format_data_lcp1">格式化Data分區將會清空您安裝的所有軟體、圖片、視頻、媒體，</string>
 		<string name="format_data_lcp2">以及對內置存儲所做的加密等。</string>
 		<string name="format_data_wtc1">格式化Data分區會清除您的所有軟體</string>
 		<string name="format_data_wtc2">備份和媒體數據，無法撤銷。</string>
@@ -515,7 +515,7 @@
 		<string name="restore_part_count">恢復{1}個分區…</string>
 		<string name="total_restore_size">恢復檔案總計{1}MB</string>
 		<string name="updating_system_details">更新系統詳細資訊</string>
-		<string name="restore_completed">[恢复完成，耗时{1} 秒]</string>
+		<string name="restore_completed">[恢復已完成，耗時{1}秒。]</string>
 		<!-- {1} is the path we could not open, {2} is strerror output -->
 		<string name="error_opening_strerr">打開出錯：'{1}' ({2})</string>
 		<string name="unable_locate_part_backup_name">無法通過備份名稱來查找分區：'{1}'</string>
@@ -570,7 +570,7 @@
 		<string name="repair_resize">在調整大小之前修復{1}。</string>
 		<string name="unable_resize">無法調整{1}大小。</string>
 		<string name="no_md5_found">未找到'{1}'MD5校驗檔案，請取消“啟用MD5校驗備份檔案”選項。</string>
-		<string name="md5_fail_match">'{1}'MD5校驗失敗。</string>
+		<string name="md5_fail_match">'{1}' MD5校驗失敗。</string>
 		<string name="fail_decrypt_tar">無法解密tar檔案：'{1}'</string>
 		<string name="format_data_msg">您可能需要重啟recovery才能使用/data。</string>
 		<string name="format_data_err">無法格式化並刪除加密。</string>

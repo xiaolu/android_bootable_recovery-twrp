@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <language>
-	<display>Simplified Chinese</display>
+	<display>Chinese (Simplified)</display>
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
@@ -27,8 +27,8 @@
 		<string name="dalvik">Dalvik / ART Cache</string>
 		<!-- This is a rarely used partition on a Micro SD card for a very old app2sd system -->
 		<string name="sdext">SD-EXT</string>
-		<string name="adopted_data">Adopted Data</string>
-		<string name="adopted_storage">Adopted存储</string>
+		<string name="adopted_data">适配的Data</string>
+		<string name="adopted_storage">适配的存储</string>
 
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
