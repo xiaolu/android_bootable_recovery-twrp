@@ -131,7 +131,7 @@ int OpenRecoveryScript::run_script_file(void) {
 			}
 			if (strcmp(command, "install") == 0) {
 				// Install Zip
-				DataManager::SetValue("tw_action_text2", "Installing Zip");
+				DataManager::SetValue("tw_action_text2", gui_parse_text("{@installing_zip_ors}"));
 				PartitionManager.Mount_All_Storage();
 				ret_val = Install_Command(value);
 				install_cmd = -1;
@@ -179,7 +179,7 @@ int OpenRecoveryScript::run_script_file(void) {
 				ret_val = Backup_Command(value1);
 			} else if (strcmp(command, "restore") == 0) {
 				// Restore
-				DataManager::SetValue("tw_action_text2", gui_parse_text("{@restore}"));
+				DataManager::SetValue("tw_action_text2", gui_parse_text("{@restore_ors}"));
 				PartitionManager.Mount_All_Storage();
 				DataManager::SetValue(TW_SKIP_MD5_CHECK_VAR, 0);
 				char folder_path[512], partitions[512];

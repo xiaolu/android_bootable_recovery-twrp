@@ -585,6 +585,7 @@
 		<string name="datamedia_fs_restore">警告：此/data備份檔案系統為{1}！除非把檔案系統格式設置為{1}否則可能無法啟動。</string>
 		<string name="restoring">正在恢復{1}…</string>
 		<string name="restoring_hdr">正在恢復</string>
+		<string name="restore_ors">正在恢復備份</string>
 		<string name="recreate_folder_err">無法重新創建{1}檔案夾。</string>
 		<string name="img_size_err">鏡像大小大於目標設備</string>
 		<string name="flashing">正在刷入{1}…</string>
@@ -610,6 +611,7 @@
 		<string name="injecttwrp">正在注入TWRP到boot鏡像…</string>
 		<string name="zip_err">安裝zip刷機包'{1}'時出錯</string>
 		<string name="installing_zip">正在安裝zip刷機包'{1}'</string>
+		<string name="installing_zip_ors">正在安裝zip刷機包</string>
 		<string name="select_backup_opt">設置備份選項：</string>
 		<string name="compression_on">壓縮選項已開啟</string>
 		<string name="md5_off">MD5生成已關閉</string>

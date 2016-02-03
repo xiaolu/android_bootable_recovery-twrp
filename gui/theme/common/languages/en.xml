@@ -585,6 +585,7 @@
 		<string name="datamedia_fs_restore">WARNING: This /data backup was made with {1} file system! The backup may not boot unless you change back to {1}.</string>
 		<string name="restoring">Restoring {1}...</string>
 		<string name="restoring_hdr">Restoring</string>
+		<string name="restore_ors">Restoring</string>
 		<string name="recreate_folder_err">Unable to recreate {1} folder.</string>
 		<string name="img_size_err">Size of image is larger than target device</string>
 		<string name="flashing">Flashing {1}...</string>
@@ -610,6 +611,7 @@
 		<string name="injecttwrp">Injecting TWRP into boot image...</string>
 		<string name="zip_err">Error installing zip file '{1}'</string>
 		<string name="installing_zip">Installing zip file '{1}'</string>
+		<string name="installing_zip_ors">Installing</string>
 		<string name="select_backup_opt">Setting backup options:</string>
 		<string name="compression_on">Compression is on</string>
 		<string name="md5_off">MD5 Generation is off</string>
