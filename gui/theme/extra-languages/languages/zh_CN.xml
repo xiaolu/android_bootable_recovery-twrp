@@ -365,7 +365,7 @@
 		<string name="copy_log_confirm">是否导出日志到内置存储？</string>
 		<string name="copying_log">正在导出…</string>
 		<string name="copy_log_complete">日志导出完成。</string>
-		<string name="fix_context_btn">修复上下文</string>
+		<string name="fix_context_btn">修复SELinux</string>
 		<string name="part_sd_btn">SD卡分区</string>
 		<string name="part_sd_s_btn">SD卡</string>
 		<string name="file_manager_btn">文件管理</string>
@@ -505,7 +505,7 @@
 		<string name="restore_started">[已开始恢复]</string>
 		<string name="restore_folder">恢复文件夹：'{1}'</string>
 		<!-- {1} is the partition display name and {2} is the number of seconds -->
-		<string name="restort_part_done">[{1}恢复完成({2}秒)]</string>
+		<string name="restore_part_done">[{1}恢复完成({2}秒)]</string>
 		<string name="verifying_md5">正在校验MD5</string>
 		<string name="skip_md5">基于用户设置，已跳过MD5检查。</string>
 		<string name="calc_restore">正在计算恢复详情…</string>
