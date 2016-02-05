@@ -137,6 +137,8 @@ static GRSurface* fbdev_init(minui_backend* backend) {
            vi.red.offset, vi.red.length,
            vi.green.offset, vi.green.length,
            vi.blue.offset, vi.blue.length);
+    printf("  fi.smem_len: %d\n", fi.smem_len);
+    printf("  fi.line_length: %d\n", fi.line_length);
 
     void* bits = mmap(0, fi.smem_len, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
     if (bits == MAP_FAILED) {
