@@ -362,7 +362,8 @@ int main(int argc, char **argv) {
 #endif
 
 	// Launch the main GUI
-	gui_start();
+	if (DataManager::GetIntValue("tw_gui_done") == 0)
+		gui_start();
 
 #ifndef TW_OEM_BUILD
 	// Check for su to see if the device is rooted or not

@@ -1030,20 +1030,6 @@ std::string TWFunc::to_string(unsigned long value) {
 	return os.str();
 }
 
-void TWFunc::Disable_Stock_Recovery_Replace(void) {
-	if (PartitionManager.Mount_By_Path("/system", false)) {
-		// Disable flashing of stock recovery
-		if (TWFunc::Path_Exists("/system/recovery-from-boot.p")) {
-			DataManager::SetValue("tw_busy", 1);
-			if (gui_startPage("disable_stock_recovery_replace", 0, 1) != 0) {
-				LOGERR("Failed to start disable stock recovery replace page.\n");
-			}
-			sync();
-		}
-		PartitionManager.UnMount_By_Path("/system", false);
-	}
-}
-
 unsigned long long TWFunc::IOCTL_Get_Block_Size(const char* block_device) {
 	unsigned long block_device_size;
 	int ret = 0;
