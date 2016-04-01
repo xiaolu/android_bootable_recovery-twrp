@@ -82,6 +82,7 @@
 		<string name="file">文件：</string>
 		<string name="zip_sig_chk">Zip刷机包签名校验</string>
 		<string name="inject_twrp_chk">安装完成后注入TWRP</string>
+		<string name="install_reboot_chk">安装完成后重启</string>
 		<string name="options_hdr">选项</string>
 		<string name="confirm_flash_hdr">确认刷入</string>
 		<string name="zip_queue">队列：</string>
@@ -674,5 +675,6 @@
 		<string name="disable_replacing">正在禁止恢复原版Recovery…</string>
 		<string name="theme_ver_err">自定义主题和TWRP版本不匹配，正使用默认主题。</string>
 		<string name="up_a_level">(返回上级目录)</string>
+		<string name="install_reboot">5秒钟后重启</string>
 	</resources>
 </language>
