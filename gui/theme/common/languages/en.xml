@@ -673,6 +673,9 @@
 		<string name="recovery_replace_cancel">Do not disable</string>
 		<string name="swipe_disable_replace">Swipe to Allow Disable</string>
 		<string name="disable_replacing">Disable stock recovery replace...</string>
+		<string name="disable_bootverify_btn">Disable Verify</string>
+		<string name="disable_bootverify_confirm">Try to disable DMVerity?</string>
+		<string name="disable_bootverify_text">DMVerity will cause device stop at the first screen.</string>
 		<string name="theme_ver_err">Custom theme version does not match TWRP version. Using stock theme.</string>
 		<string name="up_a_level">(Up A Level)</string>
 		<string name="install_reboot">Rebooting in 5 seconds</string>

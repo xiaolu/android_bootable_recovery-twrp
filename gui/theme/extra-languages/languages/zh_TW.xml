@@ -673,6 +673,9 @@
 		<string name="recovery_replace_cancel">不禁止</string>
 		<string name="swipe_disable_replace">滑動按鈕確認禁止</string>
 		<string name="disable_replacing">正在禁止恢復原版Recovery…</string>
+		<string name="disable_bootverify_btn">屏蔽校驗</string>
+		<string name="disable_bootverify_confirm">嘗試屏蔽DMVerity?</string>
+		<string name="disable_bootverify_text">DMVerity會導致設備卡在第一屏無法啓動。</string>
 		<string name="theme_ver_err">自定義主題和TWRP版本不匹配，正使用默認主題。</string>
 		<string name="up_a_level">(返回上級目錄)</string>
 		<string name="install_reboot">5秒後重啓</string>

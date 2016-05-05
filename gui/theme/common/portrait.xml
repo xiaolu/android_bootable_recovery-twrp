@@ -3237,6 +3237,26 @@
 				</actions>
 			</button>
 
+			<button style="main_button">
+				<!--<condition var1="tw_show_disable_verify" var2="1"/>-->
+				<placement x="%center_x%" y="%row19_y%"/>
+				<text>{@disable_bootverify_btn=Disable Verify}</text>
+				<actions>
+					<action function="set">tw_back=advanced</action>
+					<action function="set">tw_filename=/res/no-verity-opt-encrypt.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=flash_zip</action>
+					<action function="set">tw_text1={@disable_bootverify_text=DMVerity will cause the device stop at the first screen.}</action>
+					<action function="set">tw_text2={@disable_bootverify_confirm=Try to disable boot verify?}</action>
+					<!--<action function="set">tw_action_text1={@disable_bootverify=Disable boot verify...}</action>
+					<action function="set">tw_complete_text1={@disable_bootverify_complete=Disable boot verify Complete}</action>-->
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
 			<action>
 				<touch key="home"/>
 				<action function="page">main</action>
